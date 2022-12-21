@@ -1,0 +1,57 @@
+export const Products = [{
+        _id: '1',
+        name: "6KU fixed gear",
+        img: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1619919269-6ku-fixed-aluminum-1619919136.jpg",
+        price: 249,
+        qty: 0,
+    }, 
+    {
+        _id: '2',
+        name: "FUJI mountain bike",
+        img: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2012%2F04%2Fleader-japan-2012-725tr-fixed-gear-bike-0.jpg?fit=max&cbr=1&q=90&w=750&h=500",
+        price: 150,
+        qty: 0,
+    },
+    {
+        _id: '3',
+        name: "BMX bike",
+        img: "https://i.ebayimg.com/images/g/QogAAOSwXvdi0dYh/s-l500.jpg",
+        price: 200,
+        qty: 0,
+    },
+    {
+        _id: '4',
+        name: "Road bike",
+        img: "https://m.media-amazon.com/images/I/51EtgjCsOJL._AC_SY1000_.jpg",
+        price: 400,
+        qty: 0,
+    },
+    {
+        _id: '5',
+        name: "Road bike",
+        img: "https://www.santafixie.com/en/media/catalog/product/cache/890894c2af81858abdd618b130865074/r/a/raval-matte-grey-6.jpg",
+        price: 400,
+        qty: 0,
+    },
+    {
+        _id:'6',
+        name: "Road bike",
+        img: "https://www.materiabikes.com/wp-content/uploads/2018/08/MateriaBike_03_18-0006-e1535554001176.jpg",
+        price: 400,
+        qty: 0,
+    },
+    {
+        _id: '7',
+        name: "Road bike",
+        img: "https://cdn.shopify.com/s/files/1/0232/3305/products/JMO_0558.jpg?v=1569126331",
+        price: 400,
+        qty: 0,
+    },
+    {
+        _id: '8',
+        name: "Road bike",
+        img: "https://cdn.shopify.com/s/files/1/2658/8464/products/Unknown_Singularity_Black_Fixed_Gear_Bike.jpg?v=1569435929",
+        price: 400,
+        qty: 0,
+    }]
+    

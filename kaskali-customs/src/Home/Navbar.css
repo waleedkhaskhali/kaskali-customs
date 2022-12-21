@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'archivo'; /*a name to be used later*/
+    src: url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap'); /*URL to font*/
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0193a1;
+    font-size: 15px;
+    padding: 15px;
+    font-family: 'archivo';
+    color: white;
+  }
+  
+.nav-link {
+    color: white;
+  }
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    color: white;
+  }
+  
+.navbar .nav-links li {
+    transition: color .2s ease;
+  }
+  
+.navbar .nav-link:hover {
+    color: rgb(248, 183, 205);
+    cursor: pointer;
+    font-weight: bolder;
+  }
+  

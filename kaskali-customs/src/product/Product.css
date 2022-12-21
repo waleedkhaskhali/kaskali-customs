@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'archivo'; /*a name to be used later*/
+    src: url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap'); /*URL to font*/
+}
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'archivo';
+}
+
+.cardchild{
+    width: 22%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.cardchilds{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.productimg{
+    width: 100%;
+}
+.imgcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartBtn{
+    padding: 10px 20px;
+    background-color: #0193a1;
+    border-radius: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    cursor: pointer;
+}
