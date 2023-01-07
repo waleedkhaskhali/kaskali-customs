@@ -52,7 +52,7 @@ function Custom() {
   useEffect(() => {
     setPrice(updatePrice());
   }, [updatePrice]);
-  console.log(price);
+
   return (
     <div className="parent">
       <section className="cardBike">
