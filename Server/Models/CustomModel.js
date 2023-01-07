@@ -2,23 +2,30 @@ import mongoose from "mongoose";
 
 const customSchema = mongoose.Schema(
   {
-    backRim: {
+    backRimColor: {
       type: String,
     },
-    chain: {
+    chainColor: {
       type: String,
     },
-    frame: {
+    frameColor: {
       type: String,
     },
-    frontRim: {
+    frontRimColor: {
       type: String,
     },
-    grip: {
+    gripColor: {
       type: String,
     },
-    tire: {
+    tireColor: {
       type: String,
+    },
+    price: {
+      type: String,
+    },
+    qty: {
+      type: Number,
+      require: true,
     },
   },
   {

@@ -5,6 +5,7 @@ import "./Navbar.css";
 
 export const Navbar = () => {
   const [cartProducts, setCartProducts] = useState([]);
+
   let sum = 0;
 
   for (let index = 0; index < cartProducts.length; index++) {

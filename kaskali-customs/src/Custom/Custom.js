@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Custom.css";
 
 function Custom() {
@@ -19,15 +19,17 @@ function Custom() {
 
   const rims = ["black", "silver", "white", "blue", "red"];
 
-  let defaultValue = 250;
+  const [price, setPrice] = useState("250");
 
   const finalProduct = {
-    backRim: backRimColor,
-    chain: chainColor,
-    frame: frameColor,
-    frontRim: frontRimColor,
-    grip: gripColor,
-    tire: tireColor,
+    backRimColor,
+    chainColor,
+    frameColor,
+    frontRimColor,
+    gripColor,
+    tireColor,
+    price,
+    qty: 1,
   };
 
   const addCustomToCart = async () => {
@@ -37,16 +39,20 @@ function Custom() {
   };
 
   const updatePrice = () => {
-    let updatePrice = defaultValue;
-    updatePrice += frameColor != "black" ? 10 : 0;
-    updatePrice += gripColor != "black" ? 10 : 0;
-    updatePrice += backRimColor != "black" ? 10 : 0;
-    updatePrice += chainColor != "black" ? 10 : 0;
-    updatePrice += tireColor != "black" ? 10 : 0;
-    updatePrice += frontRimColor != "black" ? 10 : 0;
-    return updatePrice;
+    let newPrice = 250;
+    newPrice += frameColor != "black" ? 10 : 0;
+    newPrice += gripColor != "black" ? 10 : 0;
+    newPrice += backRimColor != "black" ? 10 : 0;
+    newPrice += chainColor != "black" ? 10 : 0;
+    newPrice += tireColor != "black" ? 10 : 0;
+    newPrice += frontRimColor != "black" ? 10 : 0;
+    return newPrice;
   };
 
+  useEffect(() => {
+    setPrice(updatePrice());
+  }, [updatePrice]);
+  console.log(price);
   return (
     <div className="parent">
       <section className="cardBike">

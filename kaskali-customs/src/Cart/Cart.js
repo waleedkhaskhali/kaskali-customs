@@ -16,6 +16,10 @@ export const Cart = () => {
     }
   };
 
+  const deleteCustomItem = async (id) => {
+    await axios.delete(`/api/custom/delete/${id}`);
+  };
+
   useEffect(() => {
     const fetchproducts = async () => {
       const { data } = await axios.get("/api/products/:id");
@@ -69,7 +73,7 @@ export const Cart = () => {
               <div className="quantity">
                 <span>{product.qty}</span>
               </div>
-              <div className="subtotal">104.00</div>
+              <div className="subtotal">$ {product.price + 20}</div>
               <div className="remove">
                 <button
                   className="removeButton"
@@ -103,13 +107,13 @@ export const Cart = () => {
                       <div>
                         <img
                           className="customcard"
-                          src={require(`../imgs/grips/grip_riser_${product.grip}.png`)}
+                          src={require(`../imgs/grips/grip_riser_${product.gripColor}.png`)}
                         ></img>
                       </div>
                       <div>
                         <img
                           className="customcard"
-                          src={require(`../imgs/tires/tires_${product.tire}.png`)}
+                          src={require(`../imgs/tires/tires_${product.tireColor}.png`)}
                         ></img>
                       </div>
                       <div>
@@ -133,26 +137,26 @@ export const Cart = () => {
                       <div>
                         <img
                           className="customcard"
-                          src={require(`../imgs/chains/chain_${product.chain}.png`)}
+                          src={require(`../imgs/chains/chain_${product.chainColor}.png`)}
                         ></img>
                       </div>
                       <div>
                         <img
                           className="customcard"
-                          src={require(`../imgs/rims/rim_front_${product.frontRim}.png`)}
+                          src={require(`../imgs/rims/rim_front_${product.frontRimColor}.png`)}
                         ></img>
                       </div>
                       <div>
                         <img
                           className="customcard"
-                          src={require(`../imgs/rims/rim_back_${product.backRim}.png`)}
+                          src={require(`../imgs/rims/rim_back_${product.backRimColor}.png`)}
                         ></img>
                       </div>
                     </div>
                     <div>
                       <img
                         className="customcard"
-                        src={require(`../imgs/frames/frame_${product.frame}_0.png`)}
+                        src={require(`../imgs/frames/frame_${product.frameColor}_0.png`)}
                       ></img>
                     </div>
                     <div className="product-detail">
@@ -164,7 +168,7 @@ export const Cart = () => {
                     </div>
                   </div>
                 </div>
-                <div className="price">$ 250{product.price}</div>
+                <div className="price">$ {product.price}</div>
                 <div className="quantity">
                   <span>1</span>
                 </div>
@@ -172,7 +176,7 @@ export const Cart = () => {
                 <div className="remove">
                   <button
                     className="removeButton"
-                    onClick={() => deleteItem(product._id)}
+                    onClick={() => deleteCustomItem(product._id)}
                   >
                     Remove
                   </button>

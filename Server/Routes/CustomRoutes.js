@@ -12,4 +12,13 @@ customRoute.get(
   })
 );
 
+customRoute.delete(
+  "/delete/:id",
+  asyncHandler(async (req, res) => {
+    const customItem = await Custom.findById(req.params.id);
+    await Custom.deleteOne(customItem);
+    res.json(customItem);
+  })
+);
+
 export default customRoute;
